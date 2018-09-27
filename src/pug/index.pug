@@ -1,0 +1,69 @@
+extends ./base/layout.pug
+
+block content
+    .welcome-screen(data-300="transform: translateY(0px);" data-end="transform: translateY(-1500px);")
+        .rectangle.blue(data-start="left: 182px; top: 56px;" data-end="left: 182px; top: -800px;")
+        .rectangle.blue.heavy-blurred(data-start="right: 360px; top: 82px;" data-end="right: 360px; top: -1300px;")
+        .rectangle.blue(data-start="right: 55px; top: 350px;" data-end="right: 55px; top: -1800px;")
+        .rectangle.blue.blurred(data-start="left: 270px; top: 588px;" data-end="left: 270px; top: -1200px;")
+        .rectangle.blue.blurred(data-start="right: 340px; top: 500px;" data-end="right: 340px; top: -500px;")
+        .rectangle.orange.heavy-blurred(data-start="left: 40px; top: 380px;" data-end="left: 40px; top: -700px;")
+        .rectangle.orange.blurred(data-start="left: 350px; top: 200px;" data-end="left: 350px; top: -1500px;")
+        .rectangle.orange(data-start="right: 180px; top: 250px;" data-end="right: 180px; top: -700px;")
+        .poster
+            h2.brand IT NonStop 
+                span Conference
+            p.city lublin
+            time.date december 8, 2018
+            h1.title jfall
+            p.hashtag #java
+
+    header(data-650="opacity: 0" data-730="opacity: 1")
+        h2.logo 
+            a(href="#") it nonstop
+        time.date december 8, 2018
+        .lang
+            button#eng-lang eng
+            button#pl-lang pl
+
+    main
+        section.about
+            h3.subtitle About the conference
+            p.desc 
+                |IT NonStop: JFall is the first conference devoted to JVM and Craftsmanship organised in Lublin. During 3 tracks, the experts will talk about technology, share their experience connected with real projects and present technical case studies. We invite specialists and enthusiasts of Java and related topics. Join us!
+        section.for-speakers
+            h3.subtitle Want become a speaker?
+            p.desc
+                |Please, 
+                a(href="#") send us an email
+                |with a theme and brief description of your report. Duration of the report: up to 45 minutes
+                span Every report is viewed by the IT NonStop: JFall expert board.
+        section.location
+            h3.hidden Location
+            h4 Lublin Conference Centre
+            a(href="#").address Artura Grottgera 2, 20-029 Lublin
+            script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBBrgNH3fqyBqRXeasyc0ZcFwz8qpGeyro")
+            //- div(style="overflow:hidden;height:240px;width:675px;")
+            #gmap_canvas(style="height:240px;width:675px;")
+            style.
+                #gmap_canvas img{max-width:none!important;background:none!important}
+            |  
+            a(href="https://mapswebsite.org/") add google maps to my website
+            |  
+            script(type="text/javascript", src="https://embedmaps.com/google-maps-authorization/script.js?id=6ceafaace400bddccf67a23b3dd4e90c2ec39d06")
+            script(type="text/javascript").
+                function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(51.2468221,22.549613300000033),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(51.2468221,22.549613300000033)});infowindow = new google.maps.InfoWindow({content:'<strong></strong><br>Artura Grottgera 2<br>20-029 Lublin<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+
+        section.support
+            h3.hidden Support
+            p.subtitle If you have any questions,
+                br
+                |please contact 
+                br
+                a(href="mailto:pr-lublin@dataart.com") pr-lublin@dataart.com
+
+    footer
+        p Produced by
+        img.producer-data-art(src="./assets/images/DA-logo-white-rgb.png" alt="DataArt")
+        img.producer-ljug(src="../assets/images/ljug.png" alt="LJUG")
+        time.year 2018
