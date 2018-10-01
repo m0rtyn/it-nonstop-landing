@@ -1,0 +1,130 @@
+#welcome-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .poster {
+        margin-bottom: 130px;
+    }
+
+    .rectangle {
+        width: 60px;
+        height: 106px;
+        position: absolute;
+        z-index: -1;
+
+        &:nth-of-type(1) {
+            left: 12%;
+            top: 12%;
+        }
+        &:nth-of-type(2) {
+            right: 24%;
+            top: 18%;
+        }
+        &:nth-of-type(3) {
+            right: 4%;
+            top: 56%;
+        }
+        &:nth-of-type(4) {
+            left: 20%;
+            top: 88%;
+        }
+        &:nth-of-type(5) {
+            right: 26%;
+            top: 80%;
+        }
+        &:nth-of-type(6) {
+            left: 4%;
+            top: 56%;
+        }
+        &:nth-of-type(7) {
+            left: 28%;
+            top: 30%;
+        }
+        &:nth-of-type(8) {
+            right: 16%;
+            top: 40%;
+        }
+
+        &.blue {
+            color: rgb(83, 130, 161);
+            background-color: currentColor;
+        }
+
+        &.orange {
+            color: rgb(255, 116, 0);
+            background-color: currentColor;
+        }
+
+        &.blurred {
+            width: 55px;
+            height: 101px;
+            box-shadow: 0 0 5px 5px currentColor;
+        }
+
+        &.heavy-blurred {
+            width: 50px;
+            height: 96px;
+            box-shadow: 0 0 10px 10px currentColor;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 30px;
+            height: 53px;
+
+            &.blurred {
+                width: 27px;
+                height: 50px;
+                box-shadow: 0 0 3px 3px currentColor;
+            }
+
+            &.heavy-blurred {
+                width: 25px;
+                height: 48px;
+                box-shadow: 0 0 5px 5px currentColor;
+            }
+        }
+    }
+
+    .brand {
+        font-family: 'DA_FuturaPTWebDemi', sans-serif;
+        font-weight: 900;
+        font-size: 36px;
+        margin-bottom: 72px;
+
+        span {
+            font-weight: 300;
+        }
+    }
+
+    .title {
+        font-size: 106px;
+        font-family: 'DA_FuturaPTWebDemi', sans-serif;
+        font-weight: 900;
+        margin: 16px;
+    }
+
+    .hashtag {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .big {
+        height: 2000px;
+        width: 100px;
+        background-color: black;
+    }
+
+    @media screen and (max-width: 768px) {
+        .brand {
+            font-size: calc(36px / 1.5);
+        }
+
+        .title {
+            font-size: calc(106px / 1.5)
+        }
+    }
+}

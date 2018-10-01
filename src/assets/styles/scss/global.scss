@@ -1,0 +1,62 @@
+body {
+    background-image:
+        radial-gradient(
+            circle at top left,
+            rgba(0, 0, 0, 0.3) 0,
+            rgba(0, 0, 0, 0.3) 1px,
+            white 1px,
+            white 12px);
+    background-repeat: repeat;
+    background-size: 12px 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    @media screen and (max-width: 768px) {
+        font-size: 1em;
+    }
+}
+
+h1, h2, h3, h4, p {
+    text-align: center;
+}
+
+a {
+    color: rgba(255, 116, 0, 1);
+    text-decoration: none;
+
+    &:hover {
+        color: rgba(255, 116, 0, 0.5);
+    }
+}
+
+time {
+    margin: auto;
+}
+
+.city, .date, .year {
+    font-family: 'DA_FuturaPTWebDemi', sans-serif;
+    font-weight: 900;
+    line-height: 32px;
+    margin: 0;
+
+    @media screen and (max-width: 768px) {
+        line-height: calc(32px * 0.6)
+    }
+}
+
+.city, .date, .title {
+    text-transform: uppercase;
+}
+
+.date {
+    display: block;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+

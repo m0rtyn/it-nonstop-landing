@@ -1,0 +1,44 @@
+footer {
+    background-color: rgb(83, 130, 161);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 160px;
+    height: 160px;
+    // box-sizing: border-box
+    width: 100%;
+
+    p {
+        margin: 0;
+        margin-right: 20px;
+    }
+
+    .producer-data-art {
+        width: 196px;
+    }
+    
+    .producer-ljug {
+        width: 100px;
+    }
+
+    .year {
+        margin-left: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 0 16px;
+        height: 80px;
+
+        p {
+            display: none;
+        }
+
+        .producer-data-art {
+            width: 98px
+        }
+
+        .producer-ljug {
+            width: 50px;
+        }
+    }
+}

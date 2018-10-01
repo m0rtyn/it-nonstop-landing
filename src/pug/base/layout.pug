@@ -1,5 +1,8 @@
+block variables
+    - let lang = 'en-EN';
+    
 doctype html
-html(lang='en')
+html(lang=lang)
     head
         meta(http-equiv='x-ua-compatible', content='ie=edge')
         title IT NonStop Conference
@@ -17,7 +20,11 @@ html(lang='en')
         //- link(rel='manifest', href='/site.webmanifest')
     body
         block content
-        //- script(type="text/javascript", src="../assets/js/script.min.js")
-        script(type="text/javascript", src="./js/script.min.js")
-        script.
-            var s = skrollr.init();
+        //- script(type="text/javascript", src="./js/script.min.js")
+        //- script.
+        //-     var s = skrollr.init();
+        //- script(src="./vendors/jquery/jquery.min.js")
+        //- script(src="./vendors/scrollme/dist/scrollme.js")
+        script(src="./js/script.js")
+
+        //- script(type="text/javascript" src="../js/script.js")

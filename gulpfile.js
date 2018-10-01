@@ -31,7 +31,7 @@ gulp.task('style', function() {
 });
 
 gulp.task('html', function() {
-  return gulp.src('src/pug/**/*.pug')
+  return gulp.src('src/pug/*.pug')
     .pipe(plumber())
     .pipe(pug({
       pretty: true
@@ -51,9 +51,9 @@ gulp.task('images', function() {
 
 gulp.task('js', function () {
   return gulp.src('src/js/**/*.js')
-      .pipe(concat('script.js'))
+      // .pipe(concat('script.js'))
       // .pipe(uglify())
-      .pipe(rename('script.min.js'))
+      // .pipe(rename('script.min.js'))
       .pipe(gulp.dest('public/js'))
       .pipe(browserSync.stream());
 });
@@ -68,12 +68,14 @@ gulp.task('serve', function() {
   gulp.watch('src/assets/styles/**/**/*.scss', ['style']);
   gulp.watch('src/pug/**/**/**/**/*.pug', ['html']);
   gulp.watch('src/assets/img/**/*.*', ['images']);
-  gulp.watch('src/assets/js/**/*.js', ['js']);
+  gulp.watch('src/js/**/*.js', ['js']);
 });
 
 gulp.task('copy', function() {
   return gulp.src([
-    'src/assets/fonts/*.{woff,woff2}'
+    'src/assets/fonts/*.{woff,woff2}',
+    'src/js/**/*.js',
+    'src/vendors/**'
   ], {
     base: './src/'
   })
@@ -90,4 +92,22 @@ gulp.task('upload', () => {
 	return ghPages.publish('public')
 });
 
-gulp.task('default', [ 'clean', 'copy', 'html', 'style', 'js', 'images', 'serve' ]);
+gulp.task('default', [
+  'clean',
+  'copy',
+  'html',
+  'style',
+  'js',
+  'images',
+  'serve'
+]);
+
+gulp.task('publish', [
+  'clean',
+  'copy',
+  'html',
+  'style',
+  'js',
+  'images',
+  'upload'
+]);

@@ -1,0 +1,69 @@
+header {
+    background-color: white;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    font-family: 'DA_FuturaPTWebDemi', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: fixed;
+    height: 80px;
+    transition: opacity ease-out 0.3s;
+    padding: 0 60px;
+    // box-sizing: border-box;
+
+    .logo {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    
+    .lang {
+        width: 112px;
+        
+        a {
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            font-family: 'DA_FuturaPTWebDemi', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: black;
+
+            &:first-of-type {
+                margin-right: 16px;
+            }
+
+            &.active {
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: calc(80px / 1.5);
+        padding: 0 1em;
+
+        .logo {
+            font-size: 14px;
+        }
+
+        .date {
+            display: none;
+        }
+
+        .lang {
+            width: 66px;
+
+            a {
+                font-size: 1em;
+
+                &:first-of-type {
+                    margin-right: 0.5em;
+                }
+            }
+        
+        }
+    }
+}
