@@ -3,7 +3,7 @@ const welcomeScreen = document.getElementById('welcome-screen');
 const rectangles = [...welcomeScreen.querySelectorAll('.rectangle')];
 const positionData = [ -800, -1300, -1800, -1200, -500, -700, -1500, -700 ];
 const maxDistance = 0.5;
-const header = document.querySelector('header');
+const header = document.getElementById('header');
 let rootHeight = root.clientHeight;
 let ticking = false;
 

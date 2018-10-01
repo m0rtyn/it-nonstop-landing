@@ -1,0 +1,16 @@
+.code-of-conduct {
+    h1, p {
+        text-align: left;
+    }
+
+    main {
+        padding: 100px 16px;
+        margin: auto;
+        max-width: 50%;
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+    }
+}
+

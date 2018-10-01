@@ -20,11 +20,12 @@ html(lang=lang)
         //- link(rel='manifest', href='/site.webmanifest')
     body
         block content
-        //- script(type="text/javascript", src="./js/script.min.js")
-        //- script.
-        //-     var s = skrollr.init();
-        //- script(src="./vendors/jquery/jquery.min.js")
-        //- script(src="./vendors/scrollme/dist/scrollme.js")
+        footer
+            p Produced by
+            img.producer-data-art(src="./assets/images/DA-logo-white-rgb.png" alt="DataArt")
+            img.producer-ljug(src="./assets/images/ljug.png" alt="LJUG")
+            time.year 2018
+            a(href="./code-of-conduct.html") Code of conduct
         script(src="./js/script.js")
 
         //- script(type="text/javascript" src="../js/script.js")

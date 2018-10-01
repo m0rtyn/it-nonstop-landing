@@ -1,6 +1,5 @@
 header {
     background-color: white;
-    opacity: 0;
     display: flex;
     align-items: center;
     width: 100%;
@@ -12,7 +11,10 @@ header {
     height: 80px;
     transition: opacity ease-out 0.3s;
     padding: 0 60px;
-    // box-sizing: border-box;
+
+    &#header {
+        opacity: 0;
+    }
 
     .logo {
         font-size: 20px;
