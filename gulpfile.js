@@ -111,3 +111,12 @@ gulp.task('publish', [
   'images',
   'upload'
 ]);
+
+gulp.task('build', [
+  'clean',
+  'copy',
+  'html',
+  'style',
+  'js',
+  'images'
+])
