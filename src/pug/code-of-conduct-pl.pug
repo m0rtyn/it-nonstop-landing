@@ -1,0 +1,25 @@
+extends ./base/layout.pug
+
+block content
+    .code-of-conduct
+        header
+            h2.logo
+                a(href="./index.html") it nonstop
+            time.date december 8, 2018
+            .lang
+                a(href="./code-of-conduct.html" class=(lang === 'en-EN') ? 'active' : '') eng
+                a(href="./code-of-conduct-pl.html" class=(lang === 'pl-PL') ? 'active' : '') pl
+        main
+            h1 Kodeks postępowania
+            p 
+                |Wszyscy uczestnicy, prelegenci, sponsorzy i wolontariusze konferencji IT NonStop: J-Santa są zobowiązani do przestrzegania poniższego kodeksu postępowania. Organizatorzy będą egzekwować kodeks przez cały czas trwania wydarzenia Oczekujemy współpracy ze strony uczestników, by zapewnić każdemu bezpieczne otoczenie. 
+
+            p
+                |Konferencja IT NonStop: J-Santa jest dostępna dla każdego bez względu na płeć, orientację seksualną, niepełnosprawność, wygląd, rasę czy religię. Nie akceptujemy nękania uczestników konferencji w jakiejkolwiek formie. Język i materiały o zabarwieniu seksualnym nie są odpowiednie i nie mogą być używane w miejscu konferencji, w trakcie wystąpień i wydarzeń towarzyszących oraz w jakichkolwiek elektronicznych kanałach komunikacji.
+                br
+                |Wobec uczestników konferencji łamiących te reguły będą podjęte odpowiednia działania, w tym wydalenie z konferencji z inicjatywy organizatora.
+            p
+                |Jeśli zauważysz jakiekolwiek problemy, skontaktuj się z nami przez
+                br
+                a(href="mailto:hello@j-santa.pl") hello@j-santa.pl
+            p © Copyright
