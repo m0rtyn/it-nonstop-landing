@@ -7,7 +7,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "publish": "gulp publish"
+    "deploy": "gulp publish"
   },
   "dependencies": {
     "autoprefixer": "^7.2.6",

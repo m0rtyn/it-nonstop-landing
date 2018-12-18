@@ -13,7 +13,7 @@ const del = require('del');
 const ghPages = require('gh-pages');
 
 
-gulp.task('style', function() {
+gulp.task('style', function () {
   gulp.src('src/assets/styles/scss/main.scss')
     .pipe(plumber())
     .pipe(sass())
@@ -30,7 +30,7 @@ gulp.task('style', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('html', function() {
+gulp.task('html', function () {
   return gulp.src('src/pug/*.pug')
     .pipe(plumber())
     .pipe(pug({
@@ -40,25 +40,29 @@ gulp.task('html', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('images', function() {
+gulp.task('images', function () {
   return gulp.src('src/assets/images/**/**/*.{png,jpg,gif}')
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.jpegtran({
+        progressive: true
+      }),
     ]))
     .pipe(gulp.dest('public/assets/images'));
 });
 
 gulp.task('js', function () {
   return gulp.src('src/js/**/*.js')
-      // .pipe(concat('script.js'))
-      // .pipe(uglify())
-      // .pipe(rename('script.min.js'))
-      .pipe(gulp.dest('public/js'))
-      .pipe(browserSync.stream());
+    // .pipe(concat('script.js'))
+    // .pipe(uglify())
+    // .pipe(rename('script.min.js'))
+    .pipe(gulp.dest('public/js'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('serve', function() {
+gulp.task('serve', function () {
   browserSync.init({
     server: 'public',
     notify: false,
@@ -71,25 +75,25 @@ gulp.task('serve', function() {
   gulp.watch('src/js/**/*.js', ['js']);
 });
 
-gulp.task('copy', function() {
+gulp.task('copy', function () {
   return gulp.src([
-    'src/assets/fonts/*.{woff,woff2}',
-    'src/js/**/*.js',
-    'src/vendors/**'
-  ], {
-    base: './src/'
-  })
+      'src/assets/fonts/*.{woff,woff2}',
+      'src/js/**/*.js',
+      'src/vendors/**'
+    ], {
+      base: './src/'
+    })
     .pipe(gulp.dest('./public'));
 });
 
-gulp.task('clean', function() {
+gulp.task('clean', function () {
   return del.sync([
     'public/**'
   ]);
 });
 
 gulp.task('upload', () => {
-	return ghPages.publish('public')
+  return ghPages.publish('public/**/*')
 });
 
 gulp.task('default', [
