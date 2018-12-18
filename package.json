@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "publish": "gulp publish"
   },
   "dependencies": {
     "autoprefixer": "^7.2.6",
@@ -27,6 +28,6 @@
     "gulp-svgmin": "^1.2.4",
     "normalize.css": "^8.0.0",
     "postcss-csso": "^3.0.0",
-    "postcss-fixes": "^2.0.1",
+    "postcss-fixes": "^2.0.1"
   }
 }
